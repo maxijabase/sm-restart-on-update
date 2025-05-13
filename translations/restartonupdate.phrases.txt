@@ -1,0 +1,70 @@
+"Phrases"
+{
+    "RestartInProgress"
+    {
+        "en"    "[SERVER] A restart is already in progress!"
+        "es"    "[SERVIDOR] ¡Ya hay un reinicio en progreso!"
+        "pt"    "[SERVIDOR] Um reinício já está em andamento!"
+    }
+    
+    "TestRestartInitiated"
+    {
+        "#format"   "{1:s}"
+        "en"    "[SERVER] Admin {1} has initiated a test restart sequence!"
+        "es"    "[SERVIDOR] ¡El administrador {1} ha iniciado una secuencia de reinicio de prueba!"
+        "pt"    "[SERVIDOR] O administrador {1} iniciou uma sequência de reinício de teste!"
+    }
+    
+    "NoRestartInProgress"
+    {
+        "en"    "[SERVER] There is no active restart countdown to cancel."
+        "es"    "[SERVIDOR] No hay una cuenta regresiva de reinicio activa para cancelar."
+        "pt"    "[SERVIDOR] Não há contagem regressiva de reinício ativa para cancelar."
+    }
+    
+    "RestartCountdownBegin"
+    {
+        "#format"   "{1:d}"
+        "en"    "[SERVER] Server will restart in {1} seconds due to a TF2 update!"
+        "es"    "[SERVIDOR] ¡El servidor se reiniciará en {1} segundos debido a una update de TF2!"
+        "pt"    "[SERVIDOR] O servidor será reiniciado em {1} segundos por update de TF2!"
+    }
+    
+    "RestartCancelled"
+    {
+        "#format"   "{1:s}"
+        "en"    "[SERVER] Admin {1} has cancelled the restart countdown!"
+        "es"    "[SERVIDOR] ¡El administrador {1} ha cancelado la cuenta regresiva de reinicio!"
+        "pt"    "[SERVIDOR] O administrador {1} cancelou a contagem regressiva de reinício!"
+    }
+    
+    "SteamRestartRequested"
+    {
+        "en"    "[SERVER] Steam has requested a server restart!"
+        "es"    "[SERVIDOR] ¡Steam ha solicitado un reinicio del servidor!"
+        "pt"    "[SERVIDOR] O Steam solicitou um reinício do servidor!"
+    }
+    
+    "HudRestartMessage"
+    {
+        "#format"   "{1:d}"
+        "en"    "SERVER RESTART IN {1} SECONDS DUE TO TF2 UPDATE"
+        "es"    "REINICIO DEL SERVIDOR EN {1} SEGUNDOS DEBIDO A UPDATE DE TF2"
+        "pt"    "REINÍCIO DO SERVIDOR EM {1} SEGUNDOS DEVIDO A ATUALIZAÇÃO DO TF2"
+    }
+    
+    "RestartNow"
+    {
+        "en"    "[SERVER] Server is restarting now!"
+        "es"    "[SERVIDOR] ¡El servidor se está reiniciando ahora!"
+        "pt"    "[SERVIDOR] O servidor está reiniciando agora!"
+    }
+    
+    "RejectConnection"
+    {
+        "#format"   "{1:d}"
+        "en"    "Server is restarting in {1} seconds due to a TF2 update. Please try again later."
+        "es"    "El servidor se reiniciará en {1} segundos debido a una update de TF2. Por favor, inténtelo más tarde."
+        "pt"    "O servidor será reiniciado em {1} segundos devido a update de TF2. Por favor, tente novamente mais tarde."
+    }
+}
