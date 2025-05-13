@@ -22,8 +22,9 @@ This plugin hooks into the SteamPawn API to detect when the Steam master servers
 
 1. Install nosoop's SteamPawn extension
 2. Upload the plugin to your `addons/sourcemod/plugins` directory
-3. Restart your server or load the plugin with `sm plugins load restartonupdate`
-4. Edit the configuration in `cfg/sourcemod/restartonupdate.cfg` as needed
+3. Upload the translations file to your `addons/sourcemod/translations/restartonupdate.phrases.txt`
+4. Restart your server or load the plugin with `sm plugins load restartonupdate`
+5. Edit the configuration in `cfg/sourcemod/restartonupdate.cfg` as needed
 
 ## Configuration
 
@@ -32,18 +33,23 @@ The following ConVars can be modified in the `cfg/sourcemod/restartonupdate.cfg`
 | ConVar | Default | Description |
 |--------|---------|-------------|
 | `sm_restart_time` | `60` | Time in seconds before server restarts after receiving restart request (min: 10, max: 300) |
-| `sm_restart_hud_message` | `SERVER RESTART IN %d SECONDS` | HUD message format (use %d for countdown) |
-| `sm_restart_start_message` | `[SERVER] Server will restart in %d seconds!` | Message shown when restart countdown begins (use %d for time) |
-| `sm_restart_end_message` | `[SERVER] Server is restarting now!` | Message shown when server is about to restart |
-| `sm_restart_in_progress` | `[SERVER] A restart is already in progress!` | Message shown when trying to start a restart while one is in progress |
-| `sm_restart_reject_message` | `Server is restarting in %d seconds. Please try again later.` | Message shown to players who try to connect during restart (use %d for time) |
-| `sm_restart_test_message` | `[SERVER] Admin %s has initiated a test restart sequence!` | Message shown when admin initiates test restart (use %s for admin name) |
 
 ## Commands
 
 | Command | Flag | Description |
 |---------|------|-------------|
 | `sm_testrestart` | Root (ADMFLAG_ROOT) | Simulates receiving a restart request from Steam |
+| `sm_cancelrestart` | Root (ADMFLAG_ROOT) | Cancels an ongoing restart countdown |
+
+## Translation Support
+
+The plugin supports multiple languages through SourceMod's translation system. All messages are displayed to players in their preferred language (if available). Currently supported languages:
+
+- English
+- Spanish
+- Portuguese
+
+To add more languages or modify messages, edit the `addons/sourcemod/translations/restartonupdate.phrases.txt` file.
 
 ## About SteamPawn
 
