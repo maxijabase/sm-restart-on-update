@@ -119,25 +119,19 @@ void UpdateHudMessageForAllPlayers()
 
 public Action Timer_Countdown(Handle timer)
 {
-  // Decrement the countdown
   g_iCountdown--;
   
-  // Update the HUD message for all players every second
   UpdateHudMessageForAllPlayers();
   
-  // When countdown reaches 0, execute restart
   if (g_iCountdown <= 0)
   {
-    // Reset global variables
     g_hRestartTimer = null;
     g_bRestartInProgress = false;
     
-    // Final message
     char buffer[256];
     g_Cvar_EndMessage.GetString(buffer, sizeof(buffer));
     PrintToChatAll("\x07FF0000%s", buffer);
     
-    // Execute restart command after a short delay
     CreateTimer(0.5, Timer_ExecuteRestart);
     
     return Plugin_Stop;
@@ -148,14 +142,12 @@ public Action Timer_Countdown(Handle timer)
 
 public Action Timer_ExecuteRestart(Handle timer)
 {
-  // Execute the restart command
   ServerCommand("_restart");
   return Plugin_Stop;
 }
 
 public bool OnClientConnect(int client, char[] rejectmsg, int maxlen)
 {
-  // If restart is in progress, prevent new players from joining
   if (g_bRestartInProgress)
   {
     char buffer[256];
@@ -169,7 +161,6 @@ public bool OnClientConnect(int client, char[] rejectmsg, int maxlen)
 
 public void OnPluginEnd()
 {
-  // Clean up
   if (g_hRestartTimer)
   {
     delete g_hRestartTimer;
