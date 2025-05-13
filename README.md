@@ -47,7 +47,7 @@ The following ConVars can be modified in the `cfg/sourcemod/restartonupdate.cfg`
 
 ## About SteamPawn
 
-This plugin relies on [nosoop's SteamPawn extension](https://github.com/nosoop/SMExt-SteamPawn), which is a modern replacement for the older SteamTools extension. SteamPawn provides an API to interact with Steam-related functionality, including detecting when Steam requests a server restart.
+This plugin relies on [nosoop's SteamPawn extension](https://github.com/nosoop/SM-SteamPawn), which is a modern replacement for the older SteamTools extension. SteamPawn provides an API to interact with Steam-related functionality, including detecting when Steam requests a server restart.
 
 SteamPawn provides the `SteamPawn_OnRestartRequested()` forward which is called when the Steam master servers report that your server is outdated and needs to be restarted.
 
