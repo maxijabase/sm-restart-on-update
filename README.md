@@ -1,14 +1,17 @@
 # Restart On Update
 
-A SourceMod plugin for Team Fortress 2 servers that creates a visible countdown and prevents player joins when Steam requests a server restart.
+A SourceMod plugin for Source servers that creates a visible countdown and prevents player joins when Steam requests a server restart.
 
 ## Description
 
 This plugin hooks into the SteamPawn API to detect when the Steam master servers report that your server is outdated. When this happens, the plugin will:
 
-- Display a 60-second countdown on all players' HUD
+- Display a 60-second countdown on all players' HUD (customizable time)
 - Prevent new players from joining during the countdown
 - Execute the `_restart` command when the countdown ends
+
+> [!WARNING]
+> You're responsible for making sure your server gets updated when `_restart` is executed, this plugin only provides automation for that.
 
 ## Requirements
 
