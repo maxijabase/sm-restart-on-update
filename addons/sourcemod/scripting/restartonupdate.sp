@@ -1,7 +1,5 @@
 #include <sourcemod>
 #include <steampawn>
-#include <tf2>
-#include <tf2_stocks>
 #include <adminmenu>
 
 #pragma semicolon 1
@@ -24,7 +22,7 @@ int g_iCountdown = 0;
 
 public Plugin myinfo = 
 {
-  name = "TF2 Restart On Update", 
+  name = "Restart On Update", 
   author = "ampere", 
   description = "Triggers a countdown before server restart when Steam master servers report the server is outdated", 
   version = PLUGIN_VERSION, 
@@ -46,7 +44,7 @@ public void OnPluginStart()
   
   RegAdminCmd("sm_testrestart", Command_TestRestart, ADMFLAG_ROOT, "Simulates receiving a restart request from Steam");
   
-  AutoExecConfig(true, "tf2_restart_on_update");
+  AutoExecConfig(true, "restartonupdate");
 }
 
 public Action Command_TestRestart(int client, int args)
